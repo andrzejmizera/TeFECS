@@ -1,5 +1,5 @@
 # TeFECS - Temporary Forward Edgetics Control Scheme
-This is an implementation of a~novel algorithm for identifying edge perturbation control strategies that drive a Boolean Network from a source attractor to a target attractor.
+This is an implementation of a novel algorithm for identifying edge perturbation control strategies that drive a Boolean Network from a source attractor to a target attractor.
 
 # Installation
 
@@ -56,7 +56,7 @@ By default, the results will be saved to the `tefecs_experiments` subfolder.
 
 # Running TeFECS from scratch:
 
-To run from scratch, please download CABEAN from https://satoss.uni.lu/software/CABEAN/ and set the `CABEAN_PATH` constant in refecs.py to the path of the downloaded `cabean` executable. 
+To run from scratch, please download CABEAN from https://satoss.uni.lu/software/CABEAN/ and set the `CABEAN_PATH` constant in tefecs.py to the path of the downloaded `cabean` executable. 
 
 > python tefecs.py --model-file \<ISPL file with the BN model specification\>
 
