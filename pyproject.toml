@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# See https://setuptools.pypa.io/en/latest/userguide/quickstart.html for more project configuration options.
+name = "boolnetlab"
+readme = "README.md"
+version = "1.0.0"
+authors = [
+    { name = "Anonymized", email = "anonymized@anonymized.edu" },
+]
+description = "Python library for the analysis of large Boolean networks"
+requires-python = ">=3.10"
+dependencies = [
+    "absl-py>=2.3.1",
+    "boolean.py>=5.0",
+    "dd>=0.5.7",
+    "markdown-it-py>=4.0.0",
+    "matplotlib>=3.10.7",
+    "pyvis>=0.3.2",
+    "sympy>=1.14.0",
+    "tqdm>=4.67.1",
+    "pandas>=3.0.3",
+    "seaborn>=0.13.2",
+    "python-sat==1.9.dev15"
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "anonymized"
+Documentation = "anonymized"
+Repository = "anonymized"
+Changelog = "anonymized"
+
+[tool.setuptools.dynamic]
+version = { attr = "boolnetlab.version.VERSION" }
+

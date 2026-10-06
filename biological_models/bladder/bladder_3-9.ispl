@@ -1,0 +1,123 @@
+Agent M
+	Vars:
+		v_AKT : boolean;
+		v_ATM_b1 : boolean;
+		v_ATM_b2 : boolean;
+		v_Apoptosis_b1 : boolean;
+		v_Apoptosis_b2 : boolean;
+		v_CDC25A : boolean;
+		v_CHEK1_2_b1 : boolean;
+		v_CHEK1_2_b2 : boolean;
+		v_CyclinA : boolean;
+		v_CyclinD1 : boolean;
+		v_CyclinE1 : boolean;
+		v_DNAdamage : boolean;
+		v_E2F1_b1 : boolean;
+		v_E2F1_b2 : boolean;
+		v_E2F3_b1 : boolean;
+		v_E2F3_b2 : boolean;
+		v_EGFR : boolean;
+		v_EGFR_stimulus : boolean;
+		v_FGFR3 : boolean;
+		v_FGFR3_stimulus : boolean;
+		v_GRB2 : boolean;
+		v_GrowthInhibitors : boolean;
+		v_Growth_Arrest : boolean;
+		v_MDM2 : boolean;
+		v_PI3K : boolean;
+		v_PTEN : boolean;
+		v_Proliferation : boolean;
+		v_RAS : boolean;
+		v_RB1 : boolean;
+		v_RBL2 : boolean;
+		v_SPRY : boolean;
+		v_TP53 : boolean;
+		v_p14ARF : boolean;
+		v_p16INK4a : boolean;
+		v_p21CIP : boolean;
+	end Vars
+	Actions = {none};
+	Protocol:
+		Other: {none};
+	end Protocol
+	Evolution:
+		v_AKT=true if v_PI3K=true;
+		v_AKT=false if v_PI3K=false;
+		v_ATM_b1=true if v_DNAdamage|(v_ATM_b1&v_ATM_b2)=true;
+		v_ATM_b1=false if v_DNAdamage|(v_ATM_b1&v_ATM_b2)=false;
+		v_ATM_b2=true if v_ATM_b1&v_DNAdamage&v_E2F1_b1=true;
+		v_ATM_b2=false if v_ATM_b1&v_DNAdamage&v_E2F1_b1=false;
+		v_Apoptosis_b1=true if (v_Apoptosis_b1&v_Apoptosis_b2)|(~v_Apoptosis_b1&v_E2F1_b1&v_E2F1_b2)|(~v_Apoptosis_b1&~v_E2F1_b1&v_TP53)|(~v_Apoptosis_b1&~v_E2F1_b2&v_TP53)|(~v_Apoptosis_b2&v_E2F1_b1&v_E2F1_b2)|(~v_Apoptosis_b2&~v_E2F1_b1&v_TP53)|(~v_Apoptosis_b2&~v_E2F1_b2&v_TP53)=true;
+		v_Apoptosis_b1=false if (v_Apoptosis_b1&v_Apoptosis_b2)|(~v_Apoptosis_b1&v_E2F1_b1&v_E2F1_b2)|(~v_Apoptosis_b1&~v_E2F1_b1&v_TP53)|(~v_Apoptosis_b1&~v_E2F1_b2&v_TP53)|(~v_Apoptosis_b2&v_E2F1_b1&v_E2F1_b2)|(~v_Apoptosis_b2&~v_E2F1_b1&v_TP53)|(~v_Apoptosis_b2&~v_E2F1_b2&v_TP53)=false;
+		v_Apoptosis_b2=true if v_Apoptosis_b1&v_E2F1_b1&v_E2F1_b2=true;
+		v_Apoptosis_b2=false if v_Apoptosis_b1&v_E2F1_b1&v_E2F1_b2=false;
+		v_CDC25A=true if (~v_CHEK1_2_b1&v_E2F1_b1&~v_RBL2)|(~v_CHEK1_2_b1&v_E2F3_b1&~v_RBL2)=true;
+		v_CDC25A=false if (~v_CHEK1_2_b1&v_E2F1_b1&~v_RBL2)|(~v_CHEK1_2_b1&v_E2F3_b1&~v_RBL2)=false;
+		v_CHEK1_2_b1=true if v_ATM_b1|(v_CHEK1_2_b1&v_CHEK1_2_b2)=true;
+		v_CHEK1_2_b1=false if v_ATM_b1|(v_CHEK1_2_b1&v_CHEK1_2_b2)=false;
+		v_CHEK1_2_b2=true if v_ATM_b1&v_CHEK1_2_b1&v_E2F1_b1=true;
+		v_CHEK1_2_b2=false if v_ATM_b1&v_CHEK1_2_b1&v_E2F1_b1=false;
+		v_CyclinA=true if (v_CDC25A&v_E2F1_b1&~v_RBL2&~v_p21CIP)|(v_CDC25A&v_E2F3_b1&~v_RBL2&~v_p21CIP)=true;
+		v_CyclinA=false if (v_CDC25A&v_E2F1_b1&~v_RBL2&~v_p21CIP)|(v_CDC25A&v_E2F3_b1&~v_RBL2&~v_p21CIP)=false;
+		v_CyclinD1=true if (v_AKT&~v_p16INK4a&~v_p21CIP)|(v_RAS&~v_p16INK4a&~v_p21CIP)=true;
+		v_CyclinD1=false if (v_AKT&~v_p16INK4a&~v_p21CIP)|(v_RAS&~v_p16INK4a&~v_p21CIP)=false;
+		v_CyclinE1=true if (v_CDC25A&v_E2F1_b1&~v_RBL2&~v_p21CIP)|(v_CDC25A&v_E2F3_b1&~v_RBL2&~v_p21CIP)=true;
+		v_CyclinE1=false if (v_CDC25A&v_E2F1_b1&~v_RBL2&~v_p21CIP)|(v_CDC25A&v_E2F3_b1&~v_RBL2&~v_p21CIP)=false;
+		v_DNAdamage=true if v_DNAdamage=true;
+		v_DNAdamage=false if v_DNAdamage=false;
+		v_E2F1_b1=true if (v_E2F1_b1&v_E2F1_b2)|(~v_E2F1_b1&v_E2F3_b1&~v_RB1&~v_RBL2)|(~v_E2F1_b1&v_RAS&~v_RB1&~v_RBL2)|(~v_E2F1_b2&v_E2F3_b1&~v_RB1&~v_RBL2)|(~v_E2F1_b2&v_RAS&~v_RB1&~v_RBL2)=true;
+		v_E2F1_b1=false if (v_E2F1_b1&v_E2F1_b2)|(~v_E2F1_b1&v_E2F3_b1&~v_RB1&~v_RBL2)|(~v_E2F1_b1&v_RAS&~v_RB1&~v_RBL2)|(~v_E2F1_b2&v_E2F3_b1&~v_RB1&~v_RBL2)|(~v_E2F1_b2&v_RAS&~v_RB1&~v_RBL2)=false;
+		v_E2F1_b2=true if (v_ATM_b1&v_ATM_b2&v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F1_b1&v_E2F3_b1&v_E2F3_b2&~v_RB1&~v_RBL2)|(v_ATM_b1&v_ATM_b2&v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F1_b1&v_RAS&~v_RB1&~v_RBL2)=true;
+		v_E2F1_b2=false if (v_ATM_b1&v_ATM_b2&v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F1_b1&v_E2F3_b1&v_E2F3_b2&~v_RB1&~v_RBL2)|(v_ATM_b1&v_ATM_b2&v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F1_b1&v_RAS&~v_RB1&~v_RBL2)=false;
+		v_E2F3_b1=true if (v_E2F3_b1&v_E2F3_b2)|(~v_E2F3_b1&v_RAS&~v_RB1)|(~v_E2F3_b2&v_RAS&~v_RB1)=true;
+		v_E2F3_b1=false if (v_E2F3_b1&v_E2F3_b2)|(~v_E2F3_b1&v_RAS&~v_RB1)|(~v_E2F3_b2&v_RAS&~v_RB1)=false;
+		v_E2F3_b2=true if v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F3_b1&v_RAS&~v_RB1=true;
+		v_E2F3_b2=false if v_CHEK1_2_b1&v_CHEK1_2_b2&v_E2F3_b1&v_RAS&~v_RB1=false;
+		v_EGFR=true if (v_EGFR_stimulus&~v_FGFR3&~v_GRB2)|(~v_FGFR3&~v_GRB2&v_SPRY)=true;
+		v_EGFR=false if (v_EGFR_stimulus&~v_FGFR3&~v_GRB2)|(~v_FGFR3&~v_GRB2&v_SPRY)=false;
+		v_EGFR_stimulus=true if v_EGFR_stimulus=true;
+		v_EGFR_stimulus=false if v_EGFR_stimulus=false;
+		v_FGFR3=true if ~v_EGFR&v_FGFR3_stimulus&~v_GRB2=true;
+		v_FGFR3=false if ~v_EGFR&v_FGFR3_stimulus&~v_GRB2=false;
+		v_FGFR3_stimulus=true if v_FGFR3_stimulus=true;
+		v_FGFR3_stimulus=false if v_FGFR3_stimulus=false;
+		v_GRB2=true if v_EGFR|(v_FGFR3&~v_GRB2&~v_SPRY)=true;
+		v_GRB2=false if v_EGFR|(v_FGFR3&~v_GRB2&~v_SPRY)=false;
+		v_GrowthInhibitors=true if v_GrowthInhibitors=true;
+		v_GrowthInhibitors=false if v_GrowthInhibitors=false;
+		v_Growth_Arrest=true if v_RB1|v_RBL2|v_p21CIP=true;
+		v_Growth_Arrest=false if v_RB1|v_RBL2|v_p21CIP=false;
+		v_MDM2=true if (v_AKT&~v_ATM_b1&~v_RB1&~v_p14ARF)|(~v_ATM_b1&~v_RB1&v_TP53&~v_p14ARF)=true;
+		v_MDM2=false if (v_AKT&~v_ATM_b1&~v_RB1&~v_p14ARF)|(~v_ATM_b1&~v_RB1&v_TP53&~v_p14ARF)=false;
+		v_PI3K=true if v_GRB2&~v_PTEN&v_RAS=true;
+		v_PI3K=false if v_GRB2&~v_PTEN&v_RAS=false;
+		v_PTEN=true if v_TP53=true;
+		v_PTEN=false if v_TP53=false;
+		v_Proliferation=true if v_CyclinA|v_CyclinE1=true;
+		v_Proliferation=false if v_CyclinA|v_CyclinE1=false;
+		v_RAS=true if v_EGFR|v_FGFR3|v_GRB2=true;
+		v_RAS=false if v_EGFR|v_FGFR3|v_GRB2=false;
+		v_RB1=true if ~v_CyclinA&~v_CyclinD1&~v_CyclinE1&~v_p16INK4a=true;
+		v_RB1=false if ~v_CyclinA&~v_CyclinD1&~v_CyclinE1&~v_p16INK4a=false;
+		v_RBL2=true if ~v_CyclinD1&~v_CyclinE1=true;
+		v_RBL2=false if ~v_CyclinD1&~v_CyclinE1=false;
+		v_SPRY=true if v_RAS=true;
+		v_SPRY=false if v_RAS=false;
+		v_TP53=true if (v_ATM_b1&v_CHEK1_2_b1&~v_E2F1_b1&~v_MDM2)|(v_ATM_b1&v_CHEK1_2_b1&~v_E2F1_b2&~v_MDM2)|(v_E2F1_b1&v_E2F1_b2&~v_MDM2)=true;
+		v_TP53=false if (v_ATM_b1&v_CHEK1_2_b1&~v_E2F1_b1&~v_MDM2)|(v_ATM_b1&v_CHEK1_2_b1&~v_E2F1_b2&~v_MDM2)|(v_E2F1_b1&v_E2F1_b2&~v_MDM2)=false;
+		v_p14ARF=true if v_E2F1_b1=true;
+		v_p14ARF=false if v_E2F1_b1=false;
+		v_p16INK4a=true if v_GrowthInhibitors&~v_RB1=true;
+		v_p16INK4a=false if v_GrowthInhibitors&~v_RB1=false;
+		v_p21CIP=true if (~v_AKT&~v_CyclinE1&v_GrowthInhibitors)|(~v_AKT&~v_CyclinE1&v_TP53)=true;
+		v_p21CIP=false if (~v_AKT&~v_CyclinE1&v_GrowthInhibitors)|(~v_AKT&~v_CyclinE1&v_TP53)=false;
+	end Evolution
+end Agent
+
+InitStates
+	(M.v_DNAdamage=false or M.v_DNAdamage=true) and M.v_EGFR_stimulus=false and (M.v_FGFR3_stimulus=true or M.v_FGFR3_stimulus=false) and M.v_GrowthInhibitors=true;
+end InitStates
+
+TargetStates
+	M.v_Apoptosis_b1=true or M.v_Apoptosis_b2=true;
+end TargetStates

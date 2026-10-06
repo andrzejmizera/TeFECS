@@ -1,0 +1,146 @@
+Loaded a Boolean network of 35 nodes.
+Exact attractors:
+{'A0': {'00000000000000000000011000000100011'}, 'A1': {'00000000000000000000011000001100001'}, 'A2': {'00000000000000000011011000011110001'}, 'A3': {'00000000000000100011011000010110011'}, 'A4': {'00000100101010100011010000110010110'}, 'A5': {'01010010000100000000011001000101011'}, 'A6': {'01010010000100000000011001001101001'}, 'A7': {'01010010000100000011011001011111001'}, 'A8': {'01010010000100100011011001010111011'}}
+Exact attractor sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 1)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 2)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 3)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 4)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 5)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 6)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 7)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 8)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 9)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+----------------------------------------------------------------
+	Results of Monte Carlo attractor detection (run 10)
+----------------------------------------------------------------
+Number of pseudo-attractor states: 9
+Number of fixed-point pseudo-attractor states: 9
+Discovered attractors: {'A2', 'A5', 'A7', 'A4', 'A0', 'A8', 'A6', 'A3', 'A1'}
+Discovered fixed-point attractors: 9
+Missed attractors: set()
+Number of missed attractors: 0 out of 9
+Coverage of attractor states: {'00000000000000000000011000000100011': [1, 1], '00000000000000000000011000001100001': [1, 1], '00000000000000000011011000011110001': [1, 1], '00000000000000100011011000010110011': [1, 1], '00000100101010100011010000110010110': [1, 1], '01010010000100000000011001000101011': [1, 1], '01010010000100000000011001001101001': [1, 1], '01010010000100000011011001011111001': [1, 1], '01010010000100100011011001010111011': [1, 1]}
+False positivies: set()
+Number of false positivies: 0
+Not found attractor states: {'A0': set(), 'A1': set(), 'A2': set(), 'A3': set(), 'A4': set(), 'A5': set(), 'A6': set(), 'A7': set(), 'A8': set()}
+--- Summary of performance over 10 runs ---
+CABEAN runtime on all environmental conditions: 0.32s
+Monte Carlo attractor identification runtime(s): 12.64s, 10.80s, 10.80s, 10.79s, 10.82s, 10.82s, 10.69s, 10.81s, 10.90s, 10.63s
+Mean Monte Carlo attractor identification runtime: 10.97s (0.56s std)
+Runtime ratio(s): [39.24729549 33.55550345 33.5397707  33.51870549 33.5949749  33.61556654
+ 33.2094138  33.57093151 33.84679705 33.02564413]
+Mean ratio: 34.07 (1.74 std)
+Number of exact attractors: 9
+Number of exact fixed-point attractors: 9
+Mean number of attractors found by MC: 9.00 (0.00 std)
+Mean number of fixed-point attractors found by MC: 9.00 (0.00 std)
+Mean number of MC false positivies: 0.00 (0.00 std)
