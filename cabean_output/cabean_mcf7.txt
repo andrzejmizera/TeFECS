@@ -4,7 +4,7 @@
  Please send any feedback to <cui.su@uni.lu>
 ***************************************************************************
 
-Command line: /net/people/plgrid/plgandrzejmizera/cabean -compositional 2 /net/tscratch/people/plgandrzejmizera/aistats2027/biological_models/mcf-7/mcf7.ispl
+Command line: cabean -compositional 2 biological_models/mcf-7/mcf7.ispl
 ======================== find attractor #1 : 1 states ========================
 : 118 nodes 1 leaves 1 minterms
 0-0-1-1-1-0-1-1-1-0-0-1-0-0-0-0-0-0-0-1-1-1-1-0-1-1-1-1-0-1-1-1-0-0-0-0-1-1-0-0-1-1-1-1-1-0-0-1-1-0-0-0-0-1-1-0-0-0-0-0-0-0-0-0-0-1-0-1-0-1-0-0-1-0-0-0-1-0-1-1-1-0-0-0-0-1-1-1-0-0-0-0-0-1-1-1-0-0-0-0-0-0-1-0-0-0-0-0-0-1-0-0-1-1-0-1-0-  1

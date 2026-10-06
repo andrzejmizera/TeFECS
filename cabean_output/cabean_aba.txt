@@ -4,7 +4,7 @@
  Please send any feedback to <cui.su@uni.lu>
 ***************************************************************************
 
-Command line: /net/people/plgrid/plgandrzejmizera/cabean -compositional 2 biological_models/aba/aba81-gattaca_ec.ispl
+Command line: cabean -compositional 2 biological_models/aba/aba81-gattaca_ec.ispl
 ======================== find attractor #1 : 6 states ========================
 : 84 nodes 1 leaves 6 minterms
 0-1-1-0-1-0-1-0-0-1-0-0-0-0-1-0-0-0-0-0-0-0-1-1-1-1-0-0-1-0-0-1-0-0-1-0---0-1-0-0-1-0-0-0-0-1-1-1-0-0-0-1-0-0-0-0-0-1-1-1-0-0-1-1-1-0-0-0-0-0-1-1-0-0-0-1-1-0-0-0-  1

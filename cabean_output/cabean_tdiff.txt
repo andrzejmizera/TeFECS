@@ -4,7 +4,7 @@
  Please send any feedback to <cui.su@uni.lu>
 ***************************************************************************
 
-Command line: /net/people/plgrid/plgandrzejmizera/cabean -compositional 2 /net/tscratch/people/plgandrzejmizera/aistats2027/biological_models/t-diff/tdiff_reduced.ispl
+Command line: cabean -compositional 2 biological_models/t-diff/tdiff_reduced.ispl
 ======================== find attractor #1 : 1 states ========================
 : 69 nodes 1 leaves 1 minterms
 1-0-0-1-0-0-0-0-0-0-0-0-1-1-0-0-0-1-0-0-0-0-0-0-0-0-0-1-1-1-1-1-1-0-1-1-1-1-1-1-1-1-1-0-0-0-0-0-0-1-0-0-1-1-0-0-0-0-1-0-1-0-0-1-0-0-0-0-  1
