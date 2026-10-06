@@ -1,13 +1,5 @@
 import argparse
 
-# ISPL_FILE_PATH = 'C:/Users/AndrzejMizera/Downloads/bladder.ispl'
-# BN_FILE_PATH = 'C:/Users/AndrzejMizera/Downloads/bladder.txt'
-# NETWORK_NAME = 'bladder_'
-
-# ISPL_FILE_PATH = 'C:/Users/AndrzejMizera/Downloads/bortezomib_fixed.ispl'
-# BN_FILE_PATH = 'C:/Users/AndrzejMizera/Downloads/bortezomib_fixed.txt'
-# NETWORK_NAME = 'bortezomib_'
-
 
 def main(ispl_input_filename, bn_output_filename, network_name_prefix, reorder_variables):
 
