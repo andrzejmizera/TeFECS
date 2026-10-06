@@ -3729,17 +3729,3 @@ class BN_Realisation:
 
         return free_edges_indexes
 
-
-# fp_state = bin2state('1001010100101100000010000001011111001000001011001101010000100000000')
-
-# bn = BN_Realisation.load_ispl('/Users/andrzejmizera/Downloads/bortezomib.ispl')
-
-# pa_states = list(bn.getAttractorsMonteCarlo(n_parallel=1, burn_in_len = 2, history_len=2))
-
-# print(s)
-
-# # 10010101001011000000100000010111
-
-# # 11101000000100000011010010101001
-
-# # 11101000000100000011010000101001
