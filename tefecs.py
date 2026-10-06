@@ -503,7 +503,8 @@ def evaluate(log_folder: str,
     else:
         if not run_cabean:
             bn_attractors = bn.find_all_attractors()
-            attractor_states = bn._enumerate_attractor_states(bn_attractors)
+            # attractor_states = bn._enumerate_attractor_states(bn_attractors)
+            attractor_states = bn._enumerate_attractors(bn_attractors)
         else:
             attractor_states, ever_failed, total_cabean_runtime = computeAttractorsWithCabean(bn, log_folder, log_filename, verbose=False)
             if ever_failed:
@@ -904,7 +905,7 @@ def evaluate_on_random_BNs(num_BNs: int, BN_sizes: list[int,], max_parents: int)
     print("done.")
 
 
-def evaluate_on_given_model(model_file: str, cabean_file: str | None = None, verbose: bool = False):
+def evaluate_on_given_model(model_file: str, cabean_file: str | None = None, run_cabean: bool = True, verbose: bool = False):
 
     filename_stem = Path(model_file).stem
 
@@ -915,7 +916,7 @@ def evaluate_on_given_model(model_file: str, cabean_file: str | None = None, ver
     if not os.path.exists(log_folder):
         os.mkdir(log_folder)
     
-    results = evaluate(log_folder, filename_stem, model_file=model_file, cabean_file=cabean_file, one_edge_per_node=True, verbose=verbose)
+    results = evaluate(log_folder, filename_stem, model_file=model_file, cabean_file=cabean_file, run_cabean=run_cabean, one_edge_per_node=True, verbose=verbose)
 
     print(results)
 
@@ -964,7 +965,7 @@ def main():
     # parser.add_argument('--bn-size', type=int, help='Size of the BN to be generated (optional); used only if --model-file is not specified.')
     # parser.add_argument('--max-parents', type=int)
     parser.add_argument('--cabean-file', type=str, help='Optional Cabean output file with a list of attractors.')
-    # parser.add_argument('--no-cabean', action='store_false', dest='run_cabean', help='Disable computing exact attractors using cabean.')
+    parser.add_argument('--no-cabean', action='store_false', dest='run_cabean', help='Disable computing exact attractors using CABEAN.')
     parser.add_argument('--num_random_pairs', type=int, default=1, help='Number of random source-target attractor pairs.')
     parser.add_argument('--verbose', action='store_true', dest='verbose', help='Enable verbose mode.')
 
@@ -985,7 +986,7 @@ def main():
 
     elif (args.model_file is not None):
 
-        evaluate_on_given_model(args.model_file, args.cabean_file, verbose=args.verbose)
+        evaluate_on_given_model(model_file=args.model_file, cabean_file=args.cabean_file, run_cabean=args.run_cabean, verbose=args.verbose)
 
     else:
 
