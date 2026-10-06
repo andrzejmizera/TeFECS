@@ -32,6 +32,29 @@ Continue the installation:
 pip install -e .
 ```
 
+# Biological networks
+
+Biological networks reside in the `biological_models` directory. The directory is divided into subdirectories named after the name of the respective model. Each subdirectory contains a file in the ISPL (Interpreted Systems Programming Language) format.
+
+An .ispl file contains information about:
+
+- node names in the `Vars` section;
+- node Boolean function in the `Evolution` section;
+- environmental constraints (input nodes with defined values) in the `InitStates` section.
+- target configuration in the form of a Boolean expression in the `TargetStates` section.
+
+Target attractors are attractors that contain at least one state that complies with the target configuration, i.e. the Boolean expression defining the target configuration evaluates to `True` in this state.
+
+See Section 3.2 of the [MCMAS model checker manual](https://sail.doc.ic.ac.uk/software/mcmas/manual.pdf) for the details on the ISPL syntax.
+
+# Attractors
+
+Exact attractors computed with [CABEAN](https://satoss.uni.lu/software/CABEAN/) for individual Boolean Network models are provided in separate text files in the `cabean_output` subdirectory.
+
+# Saved trained Attractor Landscape Control Graphs (ALCGs)
+
+The ALCGs are saved in Python pickle files `results/tefecs_experiments/experiment_\<model_name\>/\<model_name\>_control_graph.pkl`.
+
 # Running the Monte Carlo method for scalable identification of attractor states
 
 The Monte Carlo method can be re-run for the ABA model as follows:
@@ -46,7 +69,7 @@ The code will run simulations on GPU if available, otherwise falling back to CPU
 
 To re-run TeFECS on the saved models, i.e. learned Attractor Landscape Control Graphs (ALCGs):
 
-> python tefecs.py --model-file biological_models/aba/aba81-gattaca_ec.ispl --control_graph_file results/tefecs_experiments/experiment_aba81-gattaca_ec/aba81-gattaca_ec_control_graph.pkl --cabean-file cabean_output/cabean_aba-gattaca_ec.txt --num_random_pairs 5 --verbose
+> \> python tefecs.py --model-file biological_models/aba/aba81-gattaca_ec.ispl --control_graph_file results/tefecs_experiments/experiment_aba81-gattaca_ec/aba81-gattaca_ec_control_graph.pkl --cabean-file cabean_output/cabean_aba-gattaca_ec.txt --num_random_pairs 5 --verbose
 
 To re-run the method for other models, provide the appropriate files from the `biological_models`, and `results/tefecs_experiments`, and `cabean_output` subfolders. 
 
@@ -58,8 +81,8 @@ By default, the results will be saved to the `tefecs_experiments` subfolder.
 
 To run from scratch, please download CABEAN from https://satoss.uni.lu/software/CABEAN/ and set the `CABEAN_PATH` constant in tefecs.py to the path of the downloaded `cabean` executable. 
 
-> python tefecs.py --model-file \<ISPL file with the BN model specification\>
+> \> python tefecs.py --model-file \<ISPL file with the BN model specification\>
 
 or
 
-> python tefecs.py --model-file \<ISPL file with the BN model specification\> --cabean-file \<Cabean output file with a list of attractors.\>
+> \> python tefecs.py --model-file \<ISPL file with the BN model specification\> --cabean-file \<Cabean output file with a list of attractors.\>
