@@ -1655,6 +1655,7 @@ class BN_Realisation:
         self.node_name_to_bdd_update_function_original = self.node_name_to_bdd_update_function.copy()
 
         # Setting environmental conditions
+        self.ec_expr = str(self.__bool_algebra.parse(environmental_conditions, simplify=True))
         if environmental_conditions is None:
             self.ec_bdd = None
             self.ec_fixed_nodes = None
@@ -3360,13 +3361,13 @@ class BN_Realisation:
 # === Requires testing before intergation into the library ===
 
     def find_all_attractors_with_ec(self, all_space_constraints: Function = None,
-                            path_to_file: str = None,
-                            filename: str = None,
-                            verbose: bool = False,
-                            environmental_condition: dict[str, bool] = {}) -> list[Function]:
+                                    path_to_file: str = None,
+                                    filename: str = None,
+                                    verbose: bool = False,
+                                    environmental_condition: dict[str, bool] | None = None) -> list[Function]:
         
         ec = None
-        if len(environmental_condition) > 0:
+        if environmental_condition is not None:
             input_node_names = set(self.getInputNodeNames())
 
             for key in environmental_condition.keys():
@@ -3434,11 +3435,16 @@ class BN_Realisation:
                                                                    functions=block_update_functions_bdd)
                     
                     # With this transition matrix find all attractors of the elementary block.
-                    block_environmental_condition = dict()
-                    for block_var in block_variables:
-                        if block_var in environmental_condition:
-                            block_environmental_condition[block_var] = environmental_condition[block_var]
-                    ec = self.__bdd_representation_of_boolean_state(block_environmental_condition)
+                    if environmental_condition is not None:
+                        block_environmental_condition = dict()
+                        for block_var in block_variables:
+                            if block_var in environmental_condition:
+                                block_environmental_condition[block_var] = environmental_condition[block_var]
+                        ec = self.__bdd_representation_of_boolean_state(block_environmental_condition)
+                    else:
+                        ec = self.__bdd.add_expr(self.ec_expr)
+                        vars_to_remove = self.__bdd.support(ec) - set(correct_order_of_block_variables)
+                        ec = self.__bdd.exist(vars_to_remove, ec)
                     block_attractors = self.__find_all_attractors_in_scc_block(T_loc,
                                                                                correct_order_of_block_variables,
                                                                                all_space=ec)
